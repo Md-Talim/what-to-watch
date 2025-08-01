@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-white: #FFFFFF;
+  --color-red: #FC4747;
+  --color-dark-blue: #000814;
+  --color-grayish-blue: #5A698F;
+  --color-semi-dark-blue: #0D1B2A;
+  --font-outfit: var(--font-outfit);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  @apply font-sans;
+  @apply bg-dark-blue text-white font-outfit;
+}
+
+/* Custom Typography Utilities */
+@layer utilities {
+  .heading-l {
+    font-weight: 300; /* Light */
+    font-size: 2rem; /* 32px */
+    line-height: 1.25;
+  }
+
+  .heading-m {
+    font-weight: 300; /* Light */
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.33;
+  }
+
+  .heading-s {
+    font-weight: 500; /* Medium */
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.33;
+  }
+
+  .heading-xs {
+    font-weight: 500; /* Medium */
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.44;
+  }
+
+  .body-m {
+    font-weight: 300; /* Light */
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.6;
+  }
+
+  .body-s {
+    font-family: var(--font-outfit);
+    font-weight: 300; /* Light */
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.6;
+  }
 }
